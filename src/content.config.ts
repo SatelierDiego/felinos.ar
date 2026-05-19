@@ -47,10 +47,10 @@ const homeCollection = defineCollection({
     }),
 });
 
-const fotografosCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/fotografos' }),
+const photographersCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/photographers' }),
   schema: z.object({
-    fotografos: z.array(
+    photographers: z.array(
       z.object({
         nombre: z.string(),
         contacto: z
@@ -161,8 +161,8 @@ const felinosCollection = defineCollection({
     }),
 });
 
-const librosCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/libros' }),
+const booksCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
   schema: ({ image }) =>
     z.object({
       books: z.array(
@@ -189,6 +189,6 @@ const librosCollection = defineCollection({
 export const collections = {
   felinos: felinosCollection,
   home: homeCollection,
-  fotografos: fotografosCollection,
-  libros: librosCollection,
+  photographers: photographersCollection,
+  books: booksCollection,
 };

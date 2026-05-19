@@ -7,8 +7,8 @@ import { SITE } from '@/site.config';
 
 import heroImage from '@/assets/images/books/books-hero.jpg';
 
-const librosEntries = await getCollection('libros');
-const books = librosEntries[0]!.data.books;
+const booksEntries = await getCollection('books');
+const books = booksEntries[0]!.data.books;
 ---
 
 <Layout

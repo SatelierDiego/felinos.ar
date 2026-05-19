@@ -4,8 +4,8 @@ import Layout from '@/layouts/Layout.astro';
 import PhotographerRow from '@/components/PhotographerRow.astro';
 import { SITE } from '@/site.config';
 
-const entries = await getCollection('fotografos');
-const fotografos = entries[0]!.data.fotografos.slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+const entries = await getCollection('photographers');
+const photographers = entries[0]!.data.photographers.slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 
 const felinosEntries = await getCollection('felinos');
 const felinosByScientificName = new Map(felinosEntries.map((f) => [f.data.scientific_name.toLowerCase(), f.data.slug]));
@@ -43,7 +43,7 @@ const pageUrl = new URL(`/fotografos/`, Astro.site);
     <div class="mx-auto max-w-7xl px-6">
       <ul class="divide-base-100 m-0 list-none divide-y p-0">
         {
-          fotografos.map((f, i) => (
+          photographers.map((f, i) => (
             <PhotographerRow
               nombre={f.nombre}
               contacto={f.contacto}

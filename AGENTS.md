@@ -47,9 +47,9 @@ src/
 ├── components/          # Componentes Astro reutilizables
 ├── content/             # Markdown por colección
 │   ├── felinos/         # Una entrada por especie (11 archivos)
-│   ├── fotografos/
+│   ├── photographers/
 │   ├── home/
-│   └── libros/
+│   └── books/
 ├── content.config.ts    # Schemas Zod — única fuente de verdad del contenido
 ├── layouts/
 │   └── Layout.astro     # Layout único
@@ -128,11 +128,11 @@ src/
 
 ### Nuevo libro
 
-- Agregar la entrada al array `books` en `src/content/libros/libros.md`.
+- Agregar la entrada al array `books` en `src/content/books/books.md`.
 
 ### Nuevo fotógrafo
 
-- Agregar la entrada al array `fotografos` en `src/content/fotografos/fotografos.md`.
+- Agregar la entrada al array `photographers` en `src/content/photographers/photographers.md`.
 
 ---
 
