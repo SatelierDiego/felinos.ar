@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SpeciesCard from '../../components/SpeciesCard.astro';
+import { SITE } from '../../site.config';
+
+const allFelinos = await getCollection('felinos');
+---
+
+<Layout
+  title={`${SITE.name} | Catálogo de especies`}
+  description="Catálogo completo de los felinos silvestres de Argentina: gato andino, puma, yaguareté, ocelote y más."
+>
+  <!-- Page header -->
+  <section class="bg-stone-900 py-20 text-white">
+    <div class="mx-auto max-w-7xl px-6">
+      <h1
+        class="font-display font-bold text-white"
+        style="font-size: var(--text-headline); line-height: var(--text-headline--line-height);"
+      >
+        Felinos silvestres
+      </h1>
+      <p class="mt-4 max-w-xl leading-relaxed text-stone-400">
+        {allFelinos.length}
+        {allFelinos.length === 1 ? 'especie documentada' : 'especies documentadas'} en Argentina.
+      </p>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="py-20">
+    <div class="mx-auto max-w-7xl px-6">
+      {
+        allFelinos.length === 0 ? (
+          <p class="py-20 text-center text-stone-500">No hay especies registradas todavía.</p>
+        ) : (
+          <ul class="m-0 grid list-none grid-cols-1 gap-8 p-0 sm:grid-cols-2 lg:grid-cols-3">
+            {allFelinos.map((entry) => (
+              <li>
+                <SpeciesCard
+                  slug={entry.data.slug}
+                  title={entry.data.hero.title}
+                  subtitle={entry.data.hero.subtitle}
+                  image={entry.data.hero.image}
+                  alt={entry.data.hero.alt}
+                  scientificName={entry.data.scientific_name}
+                  conservationStatus={entry.data.conservation_status_ar}
+                />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+</Layout>

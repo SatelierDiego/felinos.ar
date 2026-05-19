@@ -1,0 +1,7 @@
+---
+import type { IconProps } from '../types/components/Icon';
+
+const { name, class: className = '', ...rest } = Astro.props;
+---
+
+<span set:html={iconContent} class={className} {...rest} aria-hidden="true" />

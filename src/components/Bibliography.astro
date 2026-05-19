@@ -1,0 +1,21 @@
+---
+import type { BibliographyProps } from '../types/components/bibliography';
+
+interface Props extends BibliographyProps {}
+
+const { entries } = Astro.props;
+---
+
+<section class="border-base-200 bg-base-50 border-t py-4" aria-labelledby="bibliography-heading">
+  <div class="mx-auto max-w-7xl px-6">
+    <h2
+      id="bibliography-heading"
+      class="font-display text-base-500 mb-2 text-sm font-semibold tracking-widest uppercase"
+    >
+      Bibliografía
+    </h2>
+    <ul class="m-0 ml-3 list-none space-y-2 p-0">
+      {entries.map((entry) => <li class="text-base-500 list-disc text-xs leading-relaxed">{entry}</li>)}
+    </ul>
+  </div>
+</section>

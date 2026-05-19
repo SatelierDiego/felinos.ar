@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import SectionBlock from '../components/SectionBlock.astro';
+import HighlightBlock from '../components/HighlightBlock.astro';
+import SpeciesGrid from '../components/SpeciesGrid.astro';
+import Hero from '../components/Hero.astro';
+import { SITE } from '../site.config';
+
+const homeEntries = await getCollection('home');
+const home = homeEntries[0]!.data;
+const felinosOrdenados = [...home.felinos].sort((a, b) => a.title.localeCompare(b.title, 'es'));
+
+const siteUrl = new URL('/', Astro.site);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: siteUrl.href,
+    description: SITE.description,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl.origin}/images/logo.png`,
+      },
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteUrl.origin}/felinos?search={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE.name,
+    url: siteUrl.href,
+    sameAs: [],
+  },
+];
+---
+
+<Layout
+  title={`${SITE.name} | Conocé los felinos silvestres de Argentina`}
+  description="Conocé los felinos silvestres de Argentina: yaguareté, puma, gato andino y más. Información sobre su biología, hábitat y conservación."
+  jsonLd={jsonLd}
+>
+  <Hero
+    title={home.hero.title}
+    subtitle={home.hero.subtitle}
+    image={home.hero.image}
+    alt={home.hero.alt}
+    cta={home.hero.cta}
+  />
+
+  {
+    home.sections.map((section) =>
+      section.type === 'highlight' ? (
+        <HighlightBlock
+          id={section.id}
+          title={section.title}
+          content={section.content}
+          separatorBefore={section.separatorBefore}
+          separatorAfter={section.separatorAfter}
+        />
+      ) : (
+        <SectionBlock
+          id={section.id}
+          title={section.title}
+          content={section.content}
+          separatorBefore={section.separatorBefore}
+          separatorAfter={section.separatorAfter}
+        />
+      )
+    )
+  }
+
+  <!-- ── Species grid ──────────────────────────────────────────── -->
+  <SpeciesGrid felinos={felinosOrdenados} />
+</Layout>
