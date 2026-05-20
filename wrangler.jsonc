@@ -1,7 +1,7 @@
 {
 	"compatibility_date": "2026-05-20",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "felinos-ar",
+	"name": "felinosar",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
