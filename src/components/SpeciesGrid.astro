@@ -8,9 +8,9 @@ interface Props extends SpeciesGridProps {}
 const { felinos, title = 'Los felinos de Argentina', eyebrow = 'Biodiversidad felina' } = Astro.props;
 ---
 
-<section class="bg-base" aria-labelledby="species-heading">
-  <div class="w-full overflow-hidden -translate-y-6 text-base">
-    <div set:html={separatorContent} class="h-auto min-w-[2000px] w-full" />
+<section class="bg-dark" aria-labelledby="species-heading">
+  <div class="text-dark w-full -translate-y-6 overflow-hidden">
+    <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
   </div>
   <div class="mx-auto max-w-7xl px-6 py-24">
     <div class="mb-14">
@@ -42,8 +42,8 @@ const { felinos, title = 'Los felinos de Argentina', eyebrow = 'Biodiversidad fe
               alt={felino.image.alt}
               href={`/felinos/${felino.slug}/`}
               aspectRatio="1 / 1"
-              widths={[300, 150]}
-              sizes="(min-width: 640px) 300, 150"
+              widths={[160, 240, 320]}
+              sizes="(min-width: 1024px) 300px, (min-width: 640px) 33vw, 50vw"
               overlayTitle={felino.title}
               overlaySubtitle={`<i>${felino.scientific_name}</i>`}
               showArrow
