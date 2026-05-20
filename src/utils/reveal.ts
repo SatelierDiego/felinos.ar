@@ -55,11 +55,8 @@ function unreveal(el: HTMLElement, meta: RevealMeta): void {
  * Initialises reveal animations for all [data-reveal] elements inside `root`.
  * Returns a cleanup function that disconnects observers and restores styles.
  */
-export function initReveal(
-  options: RevealOptions = {},
-  root: Document | Element = document,
-): () => void {
-  const { rootMargin = '0px 0px -60px 0px', threshold = 0.1 } = options;
+export function initReveal(options: RevealOptions = {}, root: Document | Element = document): () => void {
+  const { rootMargin = '0px 0px 0px 0px', threshold = 0 } = options;
   const elements = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]'));
 
   if (elements.length === 0) return () => {};
@@ -82,7 +79,7 @@ export function initReveal(
         if (meta.once) enterObserver.unobserve(el);
       }
     },
-    { rootMargin, threshold },
+    { rootMargin, threshold }
   );
 
   // Reset observer — resets repeating elements when fully below the viewport.
@@ -96,7 +93,7 @@ export function initReveal(
         }
       }
     },
-    { threshold: 0 },
+    { threshold: 0 }
   );
 
   for (const el of elements) {
