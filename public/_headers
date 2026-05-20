@@ -1,0 +1,15 @@
+# Hashed assets from astro build — immutable, cache 1 year
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Map data
+/maps/*
+  Cache-Control: public, max-age=604800
+
+# HTML pages — revalidate on each request
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Static files (favicon, robots.txt, etc.)
+/*
+  Cache-Control: public, max-age=86400, must-revalidate
