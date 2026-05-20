@@ -66,7 +66,9 @@ export function initReveal(options: RevealOptions = {}, root: Document | Element
     return () => {};
   }
 
-  for (const el of elements) el.style.opacity = '0';
+  requestAnimationFrame(() => {
+    for (const el of elements) el.style.opacity = '0';
+  });
 
   // Entrance observer — triggers animation when element scrolls into view.
   const enterObserver = new IntersectionObserver(
