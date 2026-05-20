@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import type { HeroProps } from '../types/components/hero';
+
+interface Props extends HeroProps {}
+
+const { title = null, subtitle = null, image, alt, size = 'full', cta = null, author } = Astro.props;
+---
+
+<section
+  class:list={[
+    'relative isolate w-full overflow-hidden',
+    size === 'narrow' ? 'h-[50vh] min-h-80 md:h-[50vh] md:min-h-80' : 'h-[80vh] min-h-128 md:h-[85vh] md:min-h-128',
+  ]}
+>
+  <!-- Background image - responsive -->
+  <Image
+    src={image}
+    alt={alt}
+    widths={[640, 768, 1024, 1280, 1536, 1920]}
+    sizes={`(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1920px`}
+    class="absolute inset-0 h-full w-full object-cover"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
+
+  <!-- Content -->
+  <div
+    class="relative flex h-full items-end px-4 pb-12 after:absolute after:inset-0 after:bg-[linear-gradient(to_top_right,rgba(0,0,0,.85)_0%,rgba(0,0,0,0)_60%)] after:content-[''] md:px-6 md:pb-16 lg:px-8"
+  >
+    <div class="z-10 mx-auto w-full max-w-7xl">
+      {
+        title && (
+          <h1
+            class="font-display max-w-xl font-bold text-white text-shadow-xs/20"
+            style="font-size: var(--text-display); line-height: var(--text-display--line-height);"
+            data-reveal
+            data-animation="animate-fade-in-up"
+          >
+            {title}
+          </h1>
+        )
+      }
+      {
+        subtitle && (
+          <p
+            class="mt-4 max-w-xl text-lg leading-relaxed text-white/90 text-shadow-xs/20"
+            data-reveal
+            data-animation="animate-fade-in-up"
+            data-delay="150"
+          >
+            {subtitle}
+          </p>
+        )
+      }
+      {
+        cta && (
+          <div class="mt-8">
+            <a
+              href={cta.href}
+              class="inline-flex items-center gap-2 border border-white/80 px-6 py-3 text-sm font-semibold tracking-widest text-white uppercase transition-[background-color,color] duration-200 hover:bg-white hover:text-stone-900"
+            >
+              {cta.text}
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </div>
+  <!-- Author label -->
+  {
+    author && (
+      <div class="absolute left-[10px] top-1/2 z-10 -translate-y-1/2 -rotate-90 origin-left translate-x-[calc(-50%+0.5lh)] bg-white/60 px-3 py-1 text-xs font-medium tracking-widest text-stone-800 uppercase whitespace-nowrap">
+        {author}
+      </div>
+    )
+  }
+</section>

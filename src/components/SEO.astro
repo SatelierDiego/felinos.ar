@@ -1,0 +1,64 @@
+---
+import type { SEOProps } from '../types/components/SEO';
+import { SITE } from '../site.config';
+
+interface Props extends SEOProps {}
+
+const siteUrl = Astro.site?.href;
+
+const {
+  title,
+  description,
+  canonicalUrl,
+  image = SITE.ogImage,
+  type = 'website',
+  jsonLd = [],
+  noindex = false,
+} = Astro.props;
+
+const canonical = canonicalUrl ? new URL(canonicalUrl, siteUrl).href : new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = image?.startsWith('http') ? image : new URL(image ?? SITE.ogImage, siteUrl).href;
+---
+
+<!-- Primary -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta
+  name="robots"
+  content={noindex
+    ? 'noindex, nofollow'
+    : 'index, follow, max-image-preview:large, max-video-preview:0, max-snippet:160'}
+/>
+<meta name="author" content={SITE.name} />
+<meta name="googlebot" content="index, follow" />
+<meta name="language" content={SITE.language} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="es-AR" href={canonical} />
+<link rel="alternate" hreflang="es" href={canonical} />
+<link rel="alternate" hreflang="en" href={canonical.replace(SITE.url, `${SITE.url}/en`)} />
+
+<!-- Theme -->
+<meta name="theme-color" content={SITE.themeColor} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={SITE.locale} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={SITE.twitterHandle} />
+<meta name="twitter:creator" content={SITE.twitterHandle} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:url" content={canonical} />
+
+<!-- JSON-LD -->
+{jsonLd.map((schema) => <script type="application/ld+json" set:html={JSON.stringify(schema)} />)}

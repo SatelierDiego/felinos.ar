@@ -1,0 +1,194 @@
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
+
+const homeSectionSchema = z.discriminatedUnion('type', [
+  z.object({
+    type: z.literal('default'),
+    id: z.string(),
+    title: z.string().optional(),
+    content: z.string(),
+    separatorBefore: z.boolean().default(false),
+    separatorAfter: z.boolean().default(false),
+  }),
+  z.object({
+    type: z.literal('highlight'),
+    id: z.string(),
+    title: z.string().optional(),
+    content: z.string(),
+    separatorBefore: z.boolean().default(false),
+    separatorAfter: z.boolean().default(false),
+  }),
+]);
+
+const homeCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/home' }),
+  schema: ({ image }) =>
+    z.object({
+      hero: z.object({
+        title: z.string(),
+        subtitle: z.string(),
+        image: image(),
+        alt: z.string(),
+        cta: z.object({ href: z.string(), text: z.string() }).optional(),
+      }),
+      sections: z.array(homeSectionSchema),
+      felinos: z.array(
+        z.object({
+          slug: z.string(),
+          title: z.string(),
+          scientific_name: z.string(),
+          image: z.object({
+            src: image(),
+            alt: z.string(),
+          }),
+        })
+      ),
+    }),
+});
+
+const photographersCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/photographers' }),
+  schema: z.object({
+    photographers: z.array(
+      z.object({
+        nombre: z.string(),
+        contacto: z
+          .array(
+            z.object({
+              titulo: z.string(),
+              url: z.string().url(),
+              icon: z.string().optional(),
+            })
+          )
+          .optional(),
+        felinos: z.array(z.string()).optional(),
+      })
+    ),
+  }),
+});
+
+const felinosCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/felinos' }),
+  schema: ({ image }) =>
+    z.object({
+      slug: z.string(),
+
+      hero: z.object({
+        title: z.string(),
+        subtitle: z.string(),
+        image: image(),
+        alt: z.string(),
+      }),
+
+      seo: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+
+      scientific_name: z.string(),
+
+      stats: z.object({
+        silouette: image(),
+        size: z.object({
+          weight: z.string(),
+          body: z.string(),
+          tail: z.string(),
+          height_at_withers: z.string(),
+        }),
+        conservationStatus: z.object({
+          iucn: z.string(),
+          sarem: z.string(),
+        }),
+        diet: z.string(),
+        habitat: z.string(),
+        activity: z.string(),
+        habits: z.string(),
+        generationTime: z.string(),
+        otherNames: z.string(),
+      }),
+
+      sections: z.array(
+        z.object({
+          type: z.enum(['default', 'highlight']).default('default'),
+          id: z.string(),
+          title: z.string(),
+          content: z.string(),
+          separatorBefore: z.boolean().default(false),
+          separatorAfter: z.boolean().default(false),
+          images: z
+            .array(
+              z.object({
+                src: image(),
+                alt: z.string(),
+                credit: z.string().optional(),
+              })
+            )
+            .default([]),
+          map: z
+            .object({
+              lat: z.number(),
+              lng: z.number(),
+              zoom: z.number(),
+              geojson: z.string().optional(),
+            })
+            .optional(),
+        })
+      ),
+
+      threats: z
+        .array(
+          z.object({
+            title: z.string(),
+            icon: z.string(),
+            description: z.string(),
+          })
+        )
+        .default([]),
+
+      bibliography: z.array(z.string()).optional(),
+
+      gallery: z
+        .array(
+          z.object({
+            src: image(),
+            alt: z.string(),
+            author: z.string(),
+            position: z.enum(['top', 'left', 'bottom', 'right', 'center']).default('center').optional(),
+          })
+        )
+        .default([]),
+    }),
+});
+
+const booksCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
+  schema: ({ image }) =>
+    z.object({
+      books: z.array(
+        z.object({
+          title: z.string(),
+          authors: z.array(z.string()),
+          editorial: z.string(),
+          year: z.number(),
+          cover: image(),
+          description: z.string(),
+          links: z
+            .array(
+              z.object({
+                label: z.string(),
+                url: z.string(),
+              })
+            )
+            .default([]),
+        })
+      ),
+    }),
+});
+
+export const collections = {
+  felinos: felinosCollection,
+  home: homeCollection,
+  photographers: photographersCollection,
+  books: booksCollection,
+};

@@ -1,0 +1,45 @@
+---
+import ThreatCard from './ThreatCard.astro';
+import type { ThreatGridProps } from '../types/components/threat';
+
+import separatorContent from '../assets/separator.svg?raw';
+
+interface Props extends ThreatGridProps {}
+
+const { threats, separatorBefore = false, separatorAfter = false } = Astro.props;
+---
+
+<section class="bg-accent relative py-20" aria-labelledby="threats-heading">
+  {
+    separatorBefore && (
+      <div class="text-dark w-full -translate-y-6 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+      </div>
+    )
+  }
+
+  <div class="mx-auto max-w-7xl px-6">
+    <h2 id="threats-heading" class="font-display mb-6 text-2xl font-bold sm:text-3xl">
+      Principales amenazas para la conservación de la especie
+    </h2>
+
+    <!-- Grid -->
+    <ul class="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        threats.map((threat) => (
+          <li class="flex">
+            <ThreatCard title={threat.title} icon={threat.icon} description={threat.description} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  {
+    separatorAfter && (
+      <div class="text-dark w-full translate-y-6 rotate-180 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+      </div>
+    )
+  }
+</section>

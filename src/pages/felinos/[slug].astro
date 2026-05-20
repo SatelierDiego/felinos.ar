@@ -1,0 +1,108 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import SpeciesStats from '../../components/SpeciesStats.astro';
+import SectionBlock from '../../components/SectionBlock.astro';
+import HighlightBlock from '../../components/HighlightBlock.astro';
+import ThreatGrid from '../../components/ThreatGrid.astro';
+import Gallery from '../../components/Gallery.astro';
+import Bibliography from '../../components/Bibliography.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('felinos');
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'felinos'>;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+const siteUrl = new URL('/', Astro.site);
+const pageUrl = new URL(`/felinos/${data.slug}/`, Astro.site);
+
+const articleJsonLd = {
+  '@type': 'Article',
+  headline: data.seo.title,
+  description: data.seo.description,
+  url: pageUrl.href,
+  image: `${siteUrl}${data.hero.image.src}`,
+  about: {
+    '@type': 'Animal',
+    name: data.hero.title,
+    alternateName: data.scientific_name,
+  },
+};
+---
+
+<Layout
+  title={data.seo.title}
+  description={data.seo.description}
+  canonicalUrl={pageUrl.href}
+  image={data.hero.image.src}
+  type="article"
+  jsonLd={[articleJsonLd]}
+>
+  <Hero title={data.hero.title} subtitle={data.hero.subtitle} image={data.hero.image} alt={data.hero.alt} />
+
+  <!-- Stats bar -->
+  {
+    data.stats && (
+      <SpeciesStats
+        commonName={data.hero.title}
+        scientificName={data.scientific_name}
+        stats={data.stats}
+        separatorBefore
+        separatorAfter
+      />
+    )
+  }
+
+  <!-- Content sections -->
+  {
+    data.sections.map((section: (typeof data.sections)[number], i: number) =>
+      section.type === 'highlight' ? (
+        <HighlightBlock
+          id={section.id}
+          title={section.title}
+          content={section.content}
+          separatorBefore={section.separatorBefore}
+          separatorAfter={section.separatorAfter}
+        />
+      ) : (
+        <SectionBlock
+          id={section.id}
+          title={section.title}
+          content={section.content}
+          images={section.images}
+          map={section.map}
+          index={i}
+          separatorBefore={section.separatorBefore}
+          separatorAfter={section.separatorAfter}
+        />
+      )
+    )
+  }
+
+  <!-- Threats -->
+  {
+    data.threats.length > 0 && (
+      <div id="amenazas" class="scroll-mt-24">
+        <ThreatGrid threats={data.threats} />
+      </div>
+    )
+  }
+
+  <!-- Gallery -->
+  {data.gallery.length > 0 && <Gallery items={data.gallery} title="Galería" speciesName={data.hero.title} />}
+
+  <!-- Bibliography 
+  {data.bibliography && data.bibliography.length > 0 && <Bibliography entries={data.bibliography} />}
+  -->
+</Layout>

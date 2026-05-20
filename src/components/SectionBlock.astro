@@ -1,0 +1,77 @@
+---
+import { marked } from 'marked';
+
+import ImageBlock from './ImageBlock.astro';
+import LeafletMap from './LeafletMap.astro';
+import type { SectionBlockProps } from '../types/components/SectionBlock';
+
+import separatorContent from '../assets/separator.svg?raw';
+
+interface Props extends SectionBlockProps {}
+
+const {
+  id,
+  title,
+  content,
+  images = [],
+  map,
+  index = 0,
+  separatorBefore = false,
+  separatorAfter = false,
+} = Astro.props;
+const imagesRight = index % 2 === 0;
+const hasImages = images.length > 0;
+const hasRightCol = hasImages || !!map;
+
+const htmlContent = marked.parse(content) as string;
+---
+
+<section id={id} class="scroll-mt-24 text-base" aria-labelledby={title ? `section-${id}-heading` : undefined}>
+  {
+    separatorBefore && (
+      <div class="text-background w-full -translate-y-6 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+      </div>
+    )
+  }
+
+  <div class="mx-auto max-w-7xl px-6 py-24">
+    <div
+      class:list={[
+        'grid items-start gap-12',
+        hasRightCol ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1',
+        hasRightCol && imagesRight ? 'lg:[&>*:first-child]:order-last' : '',
+      ]}
+    >
+      <!-- Text -->
+      <div class="m-auto flex max-w-4xl flex-col justify-center" data-reveal data-animation="animate-fade-in-up">
+        {
+          title && (
+            <h2 id={`section-${id}-heading`} class="font-display mb-6 text-3xl text-base font-bold">
+              {title}
+            </h2>
+          )
+        }
+        <div class="prose-content space-y-0 leading-relaxed" set:html={htmlContent} />
+      </div>
+
+      <!-- Right column: images and/or map -->
+      {
+        hasRightCol && (
+          <div class="flex flex-col gap-6" data-reveal data-animation="animate-fade-in-up" data-delay="150">
+            {map && <LeafletMap lat={map.lat} lng={map.lng} zoom={map.zoom} geojson={map.geojson} label={title} />}
+            {hasImages && <ImageBlock images={images} position={imagesRight ? 'right' : 'left'} />}
+          </div>
+        )
+      }
+    </div>
+  </div>
+
+  {
+    separatorAfter && (
+      <div class="text-background w-full translate-y-6 rotate-180 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+      </div>
+    )
+  }
+</section>

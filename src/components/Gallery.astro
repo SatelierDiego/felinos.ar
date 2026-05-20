@@ -1,0 +1,71 @@
+---
+import ImageCard from './ImageCard.astro';
+import type { GalleryProps } from '../types/components/gallery';
+import separatorContent from '../assets/separator.svg?raw';
+
+interface Props extends GalleryProps {}
+
+const { items, title = 'Galería', speciesName } = Astro.props;
+
+if (items.length === 0) return;
+
+const galleryId = `gallery-${Math.random().toString(36).slice(2, 8)}`;
+
+const cellClasses = [
+  'bento-c1',
+  'bento-c2',
+  'bento-c3',
+  'bento-c4',
+  'bento-c5',
+  'bento-c6',
+  'bento-c7',
+  'bento-c8',
+  'bento-c9',
+  'bento-c10',
+];
+---
+
+<section class="bg-dark">
+  <!-- Separator SVG -->
+  <div class="text-dark w-full -translate-y-6 overflow-hidden">
+    <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+  </div>
+  <div class="py-20">
+    <div class="mx-auto max-w-7xl px-[clamp(12px,2vw,24px)]">
+      <div class="bento-gallery">
+        {
+          items.slice(0, 10).map((item, i) => (
+            <div class={cellClasses[i]} data-reveal data-animation="animate-fade-in-up" data-delay={i * 80}>
+              <ImageCard
+                src={item.src}
+                alt={item.alt}
+                href={item.src.src}
+                imageClass="absolute inset-0 w-full h-full"
+                objectPosition={item.position ?? 'center'}
+                showMagnifyingGlass
+                overlayTitle={item.alt}
+                overlaySubtitle={`© ${item.author}`}
+                ariaLabel={`${item.alt} — foto de ${item.author}`}
+                data-gallery={galleryId}
+                data-glightbox={`description: © ${item.author}`}
+                extraAnchorClass="glightbox h-full"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import GLightbox from 'glightbox';
+  import 'glightbox/dist/css/glightbox.css';
+
+  GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    descPosition: 'bottom',
+  });
+</script>

@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { ThreatCardProps } from '../types/components/threat';
+
+interface Props extends ThreatCardProps {}
+
+const { title, icon, description } = Astro.props;
+---
+
+<article
+  class="group relative flex h-full w-full flex-col gap-5 overflow-hidden rounded-xl border border-accent/20 bg-background p-6 transition-all duration-300 hover:border-highlight/40 hover:shadow-lg hover:-translate-y-0.5"
+>
+  <!-- Subtle top accent line -->
+  <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-highlight/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+  <!-- Icon container -->
+  <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-highlight/10 text-highlight ring-1 ring-highlight/20 transition-colors duration-300 group-hover:bg-highlight/15">
+    <Icon name={icon} class="h-5 w-5" aria-hidden="true" />
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-col gap-2">
+    <h3 class="font-display text-base text-dark font-bold leading-snug">{title}</h3>
+    <p class="text-sm leading-relaxed text-base/70">{description}</p>
+  </div>
+</article>

@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import logoBlanco from '@/assets/felinosar-logo-blanco.svg';
+import { SITE } from '@/site.config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-brand bg-base border-t text-white">
+  <div class="mx-auto max-w-7xl px-6 pt-8 pb-4">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+      <!-- Brand -->
+      <div>
+        <Image src={logoBlanco} alt={SITE.name} width={120} height={30} loading="lazy" />
+        <p class="text-base-400 mt-3 text-sm leading-relaxed">
+          Sitio de divulgación sobre los felinos silvestres de Argentina con fines educativos y de conservación.
+        </p>
+      </div>
+
+      <!-- Nav -->
+      <div>
+        <h3 class="text-base-500 text-xs font-semibold tracking-widest uppercase">Secciones</h3>
+        <ul class="mt-4 list-none space-y-2 p-0">
+          <li>
+            <a href="/felinos/" class="text-base-400 text-sm transition-colors hover:text-white">Felinos</a>
+          </li>
+          <li>
+            <a href="/libros/" class="text-base-400 text-sm transition-colors hover:text-white">Libros</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-base-500 text-xs font-semibold tracking-widest uppercase">Información</h3>
+        <p class="text-base-400 mt-4 text-sm">
+          Todas las fotos pertenecen a sus respectivos autores y no pueden ser reutilizadas sin su consentimiento.<br />
+          <a href="/fotografos">Ver listado de fotógrafos</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="border-base-800 mt-12 border-t pt-8 text-center">
+      <p class="text-base-600 text-xs">
+        &copy; {year} {SITE.name}. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
