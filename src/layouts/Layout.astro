@@ -4,6 +4,7 @@ import { Font } from 'astro:assets';
 import SEO from '@/components/SEO.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import { SITE } from '@/site.config';
 import backgroundUrl from '@/assets/background.svg?url';
 import '@/styles/global.css';
 import type { LayoutProps } from '@/types/layouts/Layout';
@@ -11,6 +12,7 @@ import type { LayoutProps } from '@/types/layouts/Layout';
 interface Props extends LayoutProps {}
 
 const { title, description, canonicalUrl, image, type, jsonLd } = Astro.props;
+const gtmId = SITE.gtmId || '';
 ---
 
 <!doctype html>
@@ -42,21 +44,22 @@ const { title, description, canonicalUrl, image, type, jsonLd } = Astro.props;
       import { initReveal } from '@/utils/reveal';
       initReveal();
     </script>
-    <script is:inline>
-      window.addEventListener('load', function () {
-        var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LQ9BTKNSZ4';
-        s.async = true;
-        document.head.appendChild(s);
-        s.onload = function () {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            window.dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-LQ9BTKNSZ4');
-        };
-      });
-    </script>
+    {gtmId && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+          height="0" width="0" style="display:none;visibility:hidden"
+        ></iframe>
+      </noscript>
+    )}
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer',gtmId);
+      </script>
+    )}
   </body>
 </html>
