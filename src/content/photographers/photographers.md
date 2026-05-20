@@ -56,7 +56,8 @@ photographers:
       - 'Panthera onca'
       - 'Puma concolor'
   - nombre: 'Antonio Nuñez Lemos'
-  - titulo: 'Sitio web'
+    contacto:
+      - titulo: 'Sitio web'
         url: 'https://www.anunezlemos.com/'
         icon: 'world'
     felinos:
