@@ -15,6 +15,13 @@ photographers:
       - 'Leopardus jacobita'
       - 'Leopardus colocolo'
   - nombre: 'Alejandro Insegna'
+    contacto:
+      - titulo: 'flickr'
+        url: 'https://www.flickr.com/photos/aleinsegna/'
+        icon: 'brand-flickr'
+      - titulo: 'FotoNat'
+        url: 'https://www.fotonat.org/ficha.php?action=principal&user_id=3375'
+        icon: 'world'
     felinos:
       - 'Panthera onca'
       - 'Puma concolor'
@@ -49,6 +56,9 @@ photographers:
       - 'Panthera onca'
       - 'Puma concolor'
   - nombre: 'Antonio Nuñez Lemos'
+  - titulo: 'Sitio web'
+        url: 'https://www.anunezlemos.com/'
+        icon: 'world'
     felinos:
       - 'Leopardus jacobita'
   - nombre: 'Arjan Haverkamp'
@@ -68,6 +78,10 @@ photographers:
       - 'Panthera onca'
       - 'Puma concolor'
   - nombre: 'Connie Lemperle'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/lemperleconnie/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus geoffroyi'
   - nombre: 'Dan McKean'
@@ -90,11 +104,19 @@ photographers:
     felinos:
       - 'Leopardus wiedii'
   - nombre: 'Goulevitch Jérémie'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/40746420@N03/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus pardalis'
       - 'Panthera onca'
       - 'Puma concolor'
   - nombre: 'Hugo Aguilar'
+    contacto:
+      - titulo: 'Facebook'
+        url: 'https://www.facebook.com/hugo.aguilar.338658'
+        icon: 'brand-facebook'
     felinos:
       - 'Leopardus geoffroyi'
   - nombre: 'Jesus Román Fernández'
@@ -112,6 +134,10 @@ photographers:
       - 'Leopardus guigna'
       - 'Leopardus jacobita'
   - nombre: 'Johanna Kok'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/people/jakok/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus geoffroyi'
   - nombre: 'Juan Reppucci'
@@ -130,9 +156,17 @@ photographers:
       - 'Leopardus pardalis'
       - 'Panthera onca'
   - nombre: 'Pablo Dolsan'
+    contacto:
+      - titulo: 'Facebook'
+        url: 'https://www.facebook.com/pablodolsan'
+        icon: 'brand-facebook'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Pedro Cristales'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/el_cristales/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus wiedii'
   - nombre: 'Samantha Schutte'
@@ -154,6 +188,10 @@ photographers:
       - 'Leopardus geoffroyi'
       - 'Leopardus jacobita'
   - nombre: 'Sebastián Perez Astutti'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/horizonte_libre/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Franco Elgueta'
@@ -177,9 +215,20 @@ photographers:
     felinos:
       - 'Herpailurus yagouaroundi'
   - nombre: 'Agustín Esmoris'
+    contacto:
+        - titulo: 'Instagram'
+          url: 'https://www.instagram.com/agustin.esmoris/'
+          icon: 'brand-instagram'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Aisse Gaertner'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/my_little_sensor/'
+        icon: 'brand-instagram'
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/aisse_gaertner/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus guttulus'
   - nombre: 'Alex Pareja'
@@ -198,6 +247,10 @@ photographers:
     felinos:
       - 'Herpailurus yagouaroundi'
   - nombre: 'Dario de la Fuente'
+    contacto:
+      - titulo: 'Facebook'
+        url: 'https://www.facebook.com/delafuentedario/'
+        icon: 'brand-facebook'
     felinos:
       - 'Puma concolor'
   - nombre: 'David J Barton'
@@ -207,6 +260,13 @@ photographers:
     felinos:
       - 'Leopardus wiedii'
   - nombre: 'Dracaena Photography'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/dracaena_photo/'
+        icon: 'brand-instagram'
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/dracaena_photography/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus tigrinus'
   - nombre: 'El Robledal'
@@ -219,15 +279,27 @@ photographers:
     felinos:
       - 'Herpailurus yagouaroundi'
   - nombre: 'Ferney Salgado'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/coravesbirdingtours/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus tigrinus'
   - nombre: 'Gabriela Contreras'
     felinos:
       - 'Puma concolor'
   - nombre: 'Geoff Gallice'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/gallice.g/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus tigrinus'
   - nombre: 'Horacio Barbieri'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/hori_barbieri/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Ignacio Escobar Gutierrez'
@@ -243,11 +315,13 @@ photographers:
   - nombre: 'Jorge Valenzuela'
     felinos:
       - 'Puma concolor'
-  - nombre: 'José G Martínez Fonseca'
+  - nombre: 'José Martínez Fonseca'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/josegabrielwildlife'
+        icon: 'brand-instagram'
     felinos:
       - 'Panthera onca'
-  - nombre: 'José Martínez Fonseca'
-    felinos:
       - 'Leopardus wiedii'
   - nombre: 'José Vinicius de Medeiros'
     felinos:
@@ -271,6 +345,10 @@ photographers:
     felinos:
       - 'Leopardus guigna'
   - nombre: 'Marcio Motta'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/marciomotta/'
+        icon: 'brand-flickr'
     felinos:
       - 'Leopardus wiedii'
       - 'Panthera onca'
@@ -278,9 +356,17 @@ photographers:
     felinos:
       - 'Herpailurus yagouaroundi'
   - nombre: 'Nicolás Lagos'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/nicolagos_s/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus jacobita'
   - nombre: 'Norton Santos'
+    contacto:
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/nortondefeis/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Olvan Gonzalez'
