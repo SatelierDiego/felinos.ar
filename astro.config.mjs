@@ -9,6 +9,14 @@ export default defineConfig({
   site: 'https://felinos.ar',
   trailingSlash: 'ignore',
 
+  image: {
+    defaultFormat: 'webp',
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: { quality: { webp: 80, avif: 70, jpeg: 85, png: 100 } },
+    },
+  },
+
   integrations: [
     sitemap(),
     icon({
