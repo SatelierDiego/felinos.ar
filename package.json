@@ -11,9 +11,11 @@
     "preview": "astro preview",
     "astro": "astro",
     "lighthouse": "lighthouse http://localhost:4321 --output=json --output-path=./lighthouse-reports/report.json --chrome-flags=\"--headless --no-sandbox --enable-logging=stderr\"",
-    "lighthouse:view": "node scripts/lighthouse-view.mjs"
+    "lighthouse:view": "node scripts/lighthouse-view.mjs",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.5.2",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/open-sans": "^5.2.7",
     "@fontsource-variable/quicksand": "^5.2.10",
@@ -26,7 +28,8 @@
     "marked": "^15.0.12",
     "sharp": "^0.34.5",
     "tailwind-animations": "^1.0.1",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "wrangler": "^4.93.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
@@ -34,5 +37,8 @@
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.4",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }

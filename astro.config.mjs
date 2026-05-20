@@ -5,15 +5,19 @@ import sitemap from '@astrojs/sitemap';
 
 import icon from 'astro-icon';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   output: 'static',
   trailingSlash: 'ignore',
+
   integrations: [
     sitemap(),
     icon({
       iconDir: 'src/assets/icons/tabler/outline',
     }),
   ],
+
   fonts: [
     {
       provider: fontProviders.fontsource(),
@@ -30,10 +34,14 @@ export default defineConfig({
       weights: ['300 700'],
     },
   ],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   devToolbar: {
     enabled: false,
   },
+
+  adapter: cloudflare(),
 });
