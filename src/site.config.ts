@@ -9,4 +9,5 @@ export const SITE = {
   language: 'Spanish',
   defaultTitleSuffix: 'Felinos.Ar',
   themeColor: '#1c1917',
+  gtmId: '',
 } as const;
