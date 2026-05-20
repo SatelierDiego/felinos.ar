@@ -11,13 +11,10 @@ const booksEntries = await getCollection('books');
 const books = booksEntries[0]!.data.books;
 ---
 
-<Layout
-  title={`Libros recomendados | ${SITE.name}`}
-  description="Una selección de publicaciones científicas y de divulgación sobre los felinos silvestres de Argentina."
->
+<Layout title={`Libros recomendados | ${SITE.name}`} description="Libros recomendados">
   <Hero
     title="Libros recomendados"
-    subtitle="Libros que no pueden faltar en la biblioteca de cualquier amante de los felinos y la naturaleza."
+    subtitle="Una selección de publicaciones científicas y de divulgación sobre los felinos silvestres de Argentina"
     image={heroImage}
     alt=""
     size="narrow"

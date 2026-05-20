@@ -3,6 +3,9 @@ import { getCollection } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 import PhotographerRow from '@/components/PhotographerRow.astro';
 import { SITE } from '@/site.config';
+import Hero from '@/components/Hero.astro';
+
+import heroImage from '@/assets/images/photographers/photographers-hero.jpg';
 
 const entries = await getCollection('photographers');
 const photographers = entries[0]!.data.photographers.slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
@@ -18,26 +21,13 @@ const pageUrl = new URL(`/fotografos/`, Astro.site);
   description={`Fotógrafos que colaboraron con imágenes para ${SITE.name}.`}
   canonicalUrl={pageUrl.href}
 >
-  <section class="bg-base-900 py-20 text-white">
-    <div class="mx-auto max-w-7xl px-6">
-      <h1
-        class="font-display font-bold text-white"
-        style="font-size: var(--text-headline); line-height: var(--text-headline--line-height);"
-        data-reveal
-        data-animation="animate-fade-in-up"
-      >
-        Fotógrafos
-      </h1>
-      <p
-        class="text-base-400 mt-4 max-w-xl leading-relaxed"
-        data-reveal
-        data-animation="animate-fade-in-up"
-        data-delay="150"
-      >
-        Agradecemos a los fotógrafos que hicieron posible este proyecto con su trabajo.
-      </p>
-    </div>
-  </section>
+  <Hero
+    title="Fotógrafos"
+    subtitle="Fotógrafos que colaboraron con su trabajo para hacer posible este proyecto"
+    image={heroImage}
+    alt=""
+    size="narrow"
+  />
 
   <section class="bg-white py-20">
     <div class="mx-auto max-w-7xl px-6">
@@ -54,5 +44,10 @@ const pageUrl = new URL(`/fotografos/`, Astro.site);
         }
       </ul>
     </div>
+    <p>
+      ¿Falta algún dato de los fotógrafos o hay algo incorrecto? Escribinos a <a href="mailto:contacto@felinos.ar"
+        >contacto@felinos.ar</a
+      >
+    </p>
   </section>
 </Layout>
