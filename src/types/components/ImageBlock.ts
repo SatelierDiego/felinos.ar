@@ -8,6 +8,9 @@ export interface ImageData {
 
 export interface ImageBlockProps {
   images: ImageData[];
-  /** Which side images appear on when layout is side-by-side */
   position?: 'left' | 'right';
+  widths?: number[];
+  sizes?: string;
+  aspectRatio?: string;
+  imageClass?: string;
 }
