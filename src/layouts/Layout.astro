@@ -12,6 +12,7 @@ import type { LayoutProps } from '@/types/layouts/Layout';
 interface Props extends LayoutProps {}
 
 const { title, description, canonicalUrl, image, type, jsonLd } = Astro.props;
+const gtagId = SITE.gtagId || '';
 const gtmId = SITE.gtmId || '';
 ---
 
@@ -52,13 +53,14 @@ const gtmId = SITE.gtmId || '';
         ></iframe>
       </noscript>
     )}
+    {gtagId && (
+      <script is:inline define:vars={{ gtagId }}>
+        (function(w,d,s,i){w.dataLayer=w.dataLayer||[];w.gtag=function(){w.dataLayer.push(arguments)};w.gtag('js',new Date());w.gtag('config',i);var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtag/js?id='+i;var l=function(){f.parentNode.insertBefore(j,f)};'requestIdleCallback'in w?w.requestIdleCallback(l):setTimeout(l,0)})(window,document,'script',gtagId);
+      </script>
+    )}
     {gtmId && (
       <script is:inline define:vars={{ gtmId }}>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer',gtmId);
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer',gtmId);
       </script>
     )}
   </body>
