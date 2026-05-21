@@ -10,7 +10,7 @@ const { felinos, title = 'Los felinos de Argentina', eyebrow = 'Biodiversidad fe
 
 <section class="bg-dark" aria-labelledby="species-heading">
   <div class="text-dark w-full -translate-y-6 overflow-hidden">
-    <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+    <div set:html={separatorContent} class="h-auto w-full min-w-500" />
   </div>
   <div class="mx-auto max-w-7xl px-6 py-24">
     <div class="mb-14">
@@ -43,7 +43,7 @@ const { felinos, title = 'Los felinos de Argentina', eyebrow = 'Biodiversidad fe
               href={`/felinos/${felino.slug}/`}
               aspectRatio="1 / 1"
               widths={[160, 240, 320]}
-              sizes="(min-width: 1024px) 300px, (min-width: 640px) 33vw, 50vw"
+              sizes="(min-width: 1024px) 300px, (min-width: 640px) 240px, 160px"
               overlayTitle={felino.title}
               overlaySubtitle={`<i>${felino.scientific_name}</i>`}
               showArrow
@@ -60,7 +60,7 @@ const { felinos, title = 'Los felinos de Argentina', eyebrow = 'Biodiversidad fe
       >
         <a
           href="/felinos/"
-          class="group rounded-card bg-highlight hover:bg-highlight/90 relative block flex aspect-square items-center justify-center overflow-hidden no-underline transition-colors duration-300"
+          class="group rounded-card bg-highlight hover:bg-highlight/90 relative flex aspect-square items-center justify-center overflow-hidden no-underline transition-colors duration-300"
         >
           <div class="flex flex-col items-center gap-3 text-center">
             <span
