@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino manchado más escaso de las Yungas argentinas, restringido a los bosques subtropicales de Jujuy y Salta.'
   image: '/src/assets/images/felines/leopardus-tigrinus/hero-anne-marie-kalus.jpg'
   alt: 'Tigrina entre la vegetación de las yungas'
+  author: 'Anne-Marie Kalus'
 
 seo:
   title: 'Tigrina (Leopardus tigrinus) | Felinos.Ar'
@@ -43,7 +44,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-tigrinus/appearance-richard-eric-stubing.jpg'
         alt: 'Tigrina mostrando su pelaje ocre con manchas negras'
-        credit: 'Richard Eric Stubing'
+        author: 'Richard Eric Stubing'
 
   - type: 'default'
     id: 'behavior'
@@ -59,7 +60,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-tigrinus/behavior-geoff-gallice.jpg'
         alt: 'Tigrina desplazándose sigilosamente'
-        credit: 'Geoff Gallice'
+        author: 'Geoff Gallice'
 
   - type: 'default'
     id: 'distribution'
@@ -99,7 +100,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-tigrinus/situation-bruno-franca.jpg'
         alt: 'Tigrina fotografiada en las Yungas'
-        credit: 'Bruno Franca'
+        author: 'Bruno Franca'
 
 threats:
   - title: 'Pérdida de hábitat'

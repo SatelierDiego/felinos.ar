@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino manchado más grande del norte argentino, símbolo de los bosques subtropicales y el Chaco.'
   image: '/src/assets/images/felines/leopardus-pardalis/hero-martha-de-jong.jpg'
   alt: 'Ocelote entre la vegetación del bosque chaqueño'
+  author: 'Martha de Jong'
 
 seo:
   title: 'Ocelote (Leopardus pardalis) | Felinos.Ar'
@@ -45,7 +46,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-pardalis/appearance-anne-marie-kalus.jpg'
         alt: 'Ocelote mostrando su pelaje con ocelos característicos'
-        credit: 'Anne-Marie Kalus'
+        author: 'Anne-Marie Kalus'
 
   - type: 'default'
     id: 'behavior'
@@ -100,7 +101,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-pardalis/situation-seth-patterson.jpg'
         alt: 'Ocelote fotografiado en su entorno natural'
-        credit: 'Seth Patterson'
+        author: 'Seth Patterson'
 
 threats:
   - title: 'Destrucción y fragmentación del hábitat'

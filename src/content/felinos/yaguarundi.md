@@ -4,8 +4,9 @@ slug: 'yaguarundi'
 hero:
   title: 'Yaguarundí'
   subtitle: 'Por su silueta y apariencia el Yaguarundí recuerda más a un mustélido que a un verdadero felino.'
-  image: '/src/assets/images/felines/herpailurus-yagouaroundi/hero-.jpg'
+  image: '/src/assets/images/felines/herpailurus-yagouaroundi/hero-anne-marie-kalus.jpg'
   alt: 'Yaguarundí entre la vegetación'
+  author: 'Anne-Marie Kalus'
 
 seo:
   title: 'Yaguarundí (Herpailurus yagouaroundi) | Felinos.Ar'
@@ -45,7 +46,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/herpailurus-yagouaroundi/appearance-gabriel-arroyo.jpg'
         alt: 'Yaguarundí de cuerpo entero mirando hacia atrás'
-        credit: 'Gabriel Arroyo'
+        author: 'Gabriel Arroyo'
 
   - type: 'default'
     id: 'behavior'
@@ -63,7 +64,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/herpailurus-yagouaroundi/behavior-jorge-francisco-sosa-alejandre.jpg'
         alt: 'Pareja de yaguarundí'
-        credit: 'Jorge Francisco Sosa Alejandre'
+        author: 'Jorge Francisco Sosa Alejandre'
 
   - type: 'default'
     id: 'distribution'
@@ -103,7 +104,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/herpailurus-yagouaroundi/situation-claudio-molfino.jpg'
         alt: 'Yaguarundí fotografiado en camino rural'
-        credit: 'Claudio Molfino'
+        author: 'Claudio Molfino'
 
 threats:
   - title: 'Caza ilegal'

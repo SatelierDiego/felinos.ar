@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino con mayor distribución geográfica de América, presente en casi todos los ambientes de Argentina.'
   image: '/src/assets/images/felines/puma-concolor/hero-cirdan-travels.jpg'
   alt: 'Puma sobre rocas en un ambiente semiárido patagónico'
+  author: 'Cirdan Travels'
 
 seo:
   title: 'Puma (Puma concolor) | Felinos.Ar'
@@ -45,7 +46,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/puma-concolor/appearance-alejandro-insegna.jpg'
         alt: 'Puma mostrando su estructura esbelta y pelaje uniforme'
-        credit: 'Alejandro Insegna'
+        author: 'Alejandro Insegna'
 
   - type: 'default'
     id: 'behavior'
@@ -63,7 +64,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/puma-concolor/behavior-nestor-f-sandoval.jpg'
         alt: 'Puma desplazándose por su territorio'
-        credit: 'Nestor F Sandoval'
+        author: 'Nestor F Sandoval'
 
   - type: 'default'
     id: 'distribution'
@@ -101,7 +102,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/puma-concolor/situation-jose-pablo-castillo.jpg'
         alt: 'Puma fotografiado en la estepa patagónica'
-        credit: 'José Pablo Castillo'
+        author: 'José Pablo Castillo'
 
 threats:
   - title: 'Destrucción y fragmentación del hábitat'

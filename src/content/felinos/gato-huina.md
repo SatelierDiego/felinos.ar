@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino más pequeño de América, restringido al bosque valdiviano y las zonas cordilleranas del sur.'
   image: '/src/assets/images/felines/leopardus-guigna/hero-eduardo-minte-hess.jpg'
   alt: 'Guiña entre la vegetación del bosque patagónico'
+  author: 'Eduardo Minte Hess'
 
 seo:
   title: 'Guiña (Leopardus guigna) | Felinos.Ar'
@@ -45,7 +46,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guigna/appearance-eduardo-minte-hess.jpg'
         alt: 'Gato huiña mostrando su pequeño tamaño y pelaje manchado'
-        credit: 'Eduardo Minte Hess'
+        author: 'Eduardo Minte Hess'
 
   - type: 'default'
     id: 'behavior'
@@ -65,7 +66,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guigna/behavior-samantha-ramírez.jpg'
         alt: 'Gato huiña desplazándose sigilosamente'
-        credit: 'Samantha Ramírez'
+        author: 'Samantha Ramírez'
 
   - type: 'default'
     id: 'distribution'
@@ -105,7 +106,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guigna/situation-eduardo-minte-hess.jpg'
         alt: 'Gato huiña fotografiado en el bosque valdiviano'
-        credit: 'Eduardo Minte Hess'
+        author: 'Eduardo Minte Hess'
 
 threats:
   - title: 'Pérdida y fragmentación del hábitat'

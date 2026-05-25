@@ -6,6 +6,7 @@ hero:
   subtitle: 'Un felino misterioso de los pastizales andinos y patagónicos, frecuentemente confundido con el gato andino.'
   image: '/src/assets/images/felines/leopardus-colocolo/hero-pablo-dolsan.jpg'
   alt: 'Gato del pajonal entre pajonales'
+  author: 'Pablo Dolsan'
 
 seo:
   title: 'Gato del Pajonal (Leopardus colocolo) | Felinos.Ar'
@@ -47,7 +48,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-colocolo/appearance-pablo-dolsan.jpg'
         alt: 'Primer plano de Gato del Pajonal'
-        credit: 'Pablo Dolsan'
+        author: 'Pablo Dolsan'
 
   - type: 'default'
     id: 'behavior'
@@ -67,7 +68,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-colocolo/behavior-patricio-escare-burgos.jpg'
         alt: 'Gato del Pajonal caminando de perfil'
-        credit: 'Patricio Escare Burgos'
+        author: 'Patricio Escare Burgos'
 
   - type: 'default'
     id: 'distribution'
@@ -109,7 +110,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-colocolo/situation-nicolas-garcia-del-castello.jpg'
         alt: 'Gato del Pajonal capturado por una cámara trampa'
-        credit: 'Nicolás García del Castelló'
+        author: 'Nicolás García del Castelló'
 
 threats:
   - title: 'Pérdida de hábitat'

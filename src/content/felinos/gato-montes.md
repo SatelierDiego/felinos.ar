@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino más distribuido de Argentina, presente desde la Patagonia hasta el norte subtropical.'
   image: '/src/assets/images/felines/leopardus-geoffroyi/hero-alexander-oehrle.jpg'
   alt: 'Gato montés entre la vegetación'
+  author: 'Alexander Oehrle'
 
 seo:
   title: 'Gato Montés (Leopardus geoffroyi) | Felinos.Ar'
@@ -47,7 +48,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-geoffroyi/appearance-hugo-aguilar.jpg'
         alt: 'Gato montés mostrando su pelaje moteado'
-        credit: 'Hugo Aguilar'
+        author: 'Hugo Aguilar'
 
   - type: 'default'
     id: 'behavior'
@@ -67,7 +68,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-geoffroyi/behavior-ellen-van-yperen.jpg'
         alt: 'Gato montés en su hábitat natural'
-        credit: 'Ellen van Yperen'
+        author: 'Ellen van Yperen'
 
   - type: 'default'
     id: 'distribution'
@@ -107,7 +108,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-geoffroyi/situation-pablo-preliasco.jpg'
         alt: 'Gato montés fotografiado en Argentina'
-        credit: 'Pablo Preliasco'
+        author: 'Pablo Preliasco'
 
 threats:
   - title: 'Caza ilegal'

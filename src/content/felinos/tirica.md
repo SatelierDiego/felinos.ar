@@ -6,6 +6,7 @@ hero:
   subtitle: 'Un pequeño felino manchado de la selva atlántica, críticamente amenazado por la pérdida de su hábitat.'
   image: '/src/assets/images/felines/leopardus-guttulus/hero-pimentavix.jpg'
   alt: 'Tirica entre la vegetación de la selva paranaense'
+  author: 'Pimentavix'
 
 seo:
   title: 'Tirica (Leopardus guttulus) | Felinos.Ar'
@@ -47,7 +48,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guttulus/apperarance-cotinga-lodge.jpg'
         alt: 'Tirica mostrando su pelaje manchado característico'
-        credit: 'Cotinga Lodge'
+        author: 'Cotinga Lodge'
 
   - type: 'default'
     id: 'behavior'
@@ -63,7 +64,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guttulus/behavior-leandro-vacchiano.jpg'
         alt: 'Tirica desplazándose sigilosamente'
-        credit: 'Leandro Vacchiano'
+        author: 'Leandro Vacchiano'
 
   - type: 'default'
     id: 'distribution'
@@ -103,7 +104,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-guttulus/situation-bruno-oliani.jpg'
         alt: 'Tirica fotografiado en la selva paranaense'
-        credit: 'Bruno Oliani'
+        author: 'Bruno Oliani'
 
 threats:
   - title: 'Fragmentación y pérdida del hábitat'

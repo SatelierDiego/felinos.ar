@@ -6,6 +6,7 @@ hero:
   subtitle: 'Uno de los felinos más amenazados de América, habitante de los Andes áridos y extremos.'
   image: '/src/assets/images/felines/leopardus-jacobita/hero-antonio-nunez-lemos.jpg'
   alt: 'Gato andino sobre rocas en ambiente de alta montaña'
+  author: 'Antonio Nuñez Lemos'
 
 seo:
   title: 'Gato Andino (Leopardus jacobita) | Felinos.Ar'
@@ -49,7 +50,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-jacobita/appearance-rodrigo-villalobos.jpg'
         alt: 'Gato andino mostrando su pelaje característico'
-        credit: 'Rodrigo Villalobos'
+        author: 'Rodrigo Villalobos'
 
   - type: 'default'
     id: 'behavior'
@@ -69,7 +70,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-jacobita/behavior-juan-reppucci.jpg'
         alt: 'Gato andino en su hábitat natural'
-        credit: 'Juan Reppucci'
+        author: 'Juan Reppucci'
 
   - type: 'default'
     id: 'distribution'
@@ -107,7 +108,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-jacobita/situation-jim-sanderson.jpg'
         alt: 'Gato andino fotografiado en la puna'
-        credit: 'Jim Sanderson'
+        author: 'Jim Sanderson'
 
 threats:
   - title: 'Minería y extracción de agua'

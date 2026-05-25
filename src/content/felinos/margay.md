@@ -6,6 +6,7 @@ hero:
   subtitle: 'El felino más arborícola de América, dotado de adaptaciones únicas para la vida en el dosel forestal.'
   image: '/src/assets/images/felines/leopardus-wiedii/hero-anne-marie-kalus.jpg'
   alt: 'Margay en las ramas de un árbol'
+  author: 'Anne-Marie Kalus'
 
 seo:
   title: 'Margay (Leopardus wiedii) | Felinos.Ar'
@@ -45,7 +46,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-wiedii/appearance-luis-piovani.jpg'
         alt: 'Margay mostrando su pelaje denso y ojos saltones'
-        credit: 'Luis Piovani'
+        author: 'Luis Piovani'
 
   - type: 'default'
     id: 'behavior'
@@ -63,7 +64,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-wiedii/behavior-henry-sandi-amador.jpg'
         alt: 'Margay desplazándose entre las ramas'
-        credit: 'Henry Sandi Amador'
+        author: 'Henry Sandi Amador'
 
   - type: 'default'
     id: 'distribution'
@@ -101,7 +102,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/leopardus-wiedii/situation-giff-beaton.jpg'
         alt: 'Margay en su hábitat forestal'
-        credit: 'Giff Beaton'
+        author: 'Giff Beaton'
 
 threats:
   - title: 'Destrucción y fragmentación del hábitat'

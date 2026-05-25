@@ -6,6 +6,7 @@ hero:
   subtitle: 'El mayor felino de América, símbolo de los grandes ecosistemas del norte argentino y especie en peligro crítico.'
   image: '/src/assets/images/felines/panthera-onca/hero-lidia-garcia.jpg'
   alt: 'Yaguareté en el borde de un cuerpo de agua en el Chaco'
+  author: 'Lidia García'
 
 seo:
   title: 'Yaguareté (Panthera onca) | Felinos.Ar'
@@ -43,7 +44,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/panthera-onca/apperarance-rdwilcox.jpg'
         alt: 'Yaguareté mostrando su imponente tamaño y pelaje con rosetas'
-        credit: 'RDWilcox'
+        author: 'RDWilcox'
 
   - type: 'default'
     id: 'behavior'
@@ -63,7 +64,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/panthera-onca/behavior-goulevitch-jeremie.jpg'
         alt: 'Yaguareté desplazándose por su territorio'
-        credit: 'Goulevitch Jérémie'
+        author: 'Goulevitch Jérémie'
 
   - type: 'default'
     id: 'distribution'
@@ -103,7 +104,7 @@ sections:
     images:
       - src: '/src/assets/images/felines/panthera-onca/situation-guy-incognito.jpg'
         alt: 'Yaguareté fotografiado en el Chaco'
-        credit: 'Guy Incognito'
+        author: 'Guy Incognito'
 
 threats:
   - title: 'Destrucción de ambientes'
