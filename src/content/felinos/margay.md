@@ -73,8 +73,6 @@ sections:
       El Margay está asociado fuertemente a selvas húmedas de la zona paranaense o de yungas, no encontrándoselo en la región chaqueña. Se lo puede hallar en zonas degradadas o antropizadas, pero siempre en el marco de un ambiente forestal. Sin embargo es menos tolerante a la modificación de su hábitat que otros felinos.
 
       Su distribución abarca gran parte de Sudamérica, encontrándoselo desde el sur de Estados Unidos hasta el norte de Argentina. En nuestro país habita las provincias de Misiones, Jujuy y Salta.
-
-      En Argentina se encuentra protegido en el Parque Nacional Iguazú y el Parque Provincial Urugua-í (Misiones), los Parques Nacional El Rey y Parque Nacional Baritú (Salta) y el Parque Nacional Calilegua (Jujuy).
     map:
       lat: -27.0
       lng: -55.0
@@ -114,7 +112,7 @@ threats:
     description: 'Persiste la caza ilegal para comercializar su piel y por ataques a animales de granja.'
 
   - title: 'Tráfico para mascotismo'
-    icon: 'alert-triangle'
+    icon: 'home'
     description: 'El tráfico ilegal de ejemplares vivos para mascotas es otra de las amenazas que enfrenta el Margay.'
 
 bibliography:

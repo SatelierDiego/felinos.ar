@@ -94,8 +94,6 @@ sections:
 
       Se estima que la población argentina se redujo un 30 % en las últimas tres generaciones —aproximadamente 15 años— a causa de la pérdida, degradación y fragmentación del hábitat. La especie muestra una tendencia poblacional decreciente, aunque no existen programas de monitoreo específicos en el noroeste argentino.
 
-      La especie está presente en varias áreas protegidas: Parques Nacionales Baritú (Salta) y Calilegua (Jujuy), y posiblemente en el PN El Rey y la RN Nogalar de los Toldos. También cuenta con presencia en áreas protegidas provinciales como la RP Acambuco y el PM Serranías de Zapla, así como en la Reserva de Biosfera de las Yungas.
-
       A nivel legal, está protegida por la Ley Nacional de Fauna Nº 22.421/81 y se encuentra en el Apéndice I de CITES. Sin embargo, no existen planes de acción ni proyectos de conservación o manejo específicos para la especie en Argentina.
     images:
       - src: '/src/assets/images/felines/leopardus-tigrinus/situation-bruno-franca.jpg'
@@ -137,10 +135,10 @@ gallery:
     alt: 'Tigrina entre la vegetación'
     author: 'Dracaena Photography'
   - src: '/src/assets/images/felines/leopardus-tigrinus/gallery/04-roger-wasley.jpg'
-    alt: 'Tigrina en las yungas'
+    alt: 'Pareja de Tigrinas'
     author: 'Roger Wasley'
   - src: '/src/assets/images/felines/leopardus-tigrinus/gallery/05-laurent-jacobs.jpg'
-    alt: 'Tigrina fotografiada de noche'
+    alt: 'Tigrina en las yungas'
     author: 'Laurent Jacobs'
   - src: '/src/assets/images/felines/leopardus-tigrinus/gallery/06-alex-pareja.jpg'
     alt: 'Tigrina en alerta'
@@ -155,6 +153,6 @@ gallery:
     alt: 'Tigrina en primer plano'
     author: 'Roger Wasley'
   - src: '/src/assets/images/felines/leopardus-tigrinus/gallery/10-isis-meri-medri.jpg'
-    alt: 'Tigrina en las yungas'
+    alt: 'Tigrina fotografiado de noche'
     author: 'Isis Meri Medri'
 ---

@@ -61,7 +61,10 @@ sections:
       Parece tener dos técnicas de caza: perseguir a su presa muy lenta y sigilosamente de modo activo, o simplemente sentarse a esperar entre 30 a 60 minutos para luego desplazarse a otra área y recomenzar el acecho.
 
       Su época de cría abarca desde octubre a enero, y da a luz entre 1 y 4 cachorros. El período de gestación aproximado es de 70 a 85 días. Como todos los gatos necesita de grandes territorios: estudios indican que una población de 500 ocelotes tendría un requerimiento de territorio de poco más de 600.000 hectáreas. En el Parque Nacional Iguazú se estima una densidad de entre 5 y 17 individuos por cada 100 km². Su longevidad máxima en cautiverio fue de 20 años.
-    images: []
+    images:
+      - src: '/src/assets/images/felines/leopardus-pardalis/behavior-hbook.jpg'
+        alt: 'Ocelote caminando sobre un tronco'
+        author: 'H. Book'
 
   - type: 'default'
     id: 'distribution'
@@ -73,7 +76,6 @@ sections:
 
       En Argentina se encuentra principalmente en Misiones, norte de Corrientes, este de Chaco y Formosa, y la cuña yungueña representada por el este de Jujuy, el centro de Salta y el centro norte de Tucumán.
 
-      Se conoce su presencia en el Parque Nacional Iguazú, el Parque Nacional Calilegua, el Parque Nacional Río Pilcomayo, el Parque Nacional El Impenetrable y el Parque Nacional Chaco, entre otros. En 2016 se registró un individuo en la Isla San Alonso, en los Esteros del Iberá.
     map:
       lat: -24.0
       lng: -62.0
@@ -113,7 +115,7 @@ threats:
     description: 'Persiste la caza ilegal para comercializar su piel y la caza por ataques a animales de granja.'
 
   - title: 'Tráfico para mascotismo'
-    icon: 'prison'
+    icon: 'home'
     description: 'El tráfico ilegal de ejemplares vivos para mascotas es otra de las amenazas que enfrenta el Ocelote.'
 
 bibliography:

@@ -77,8 +77,6 @@ sections:
       Se lo encuentra hasta los 2500 msnm, aunque también puede hallárselo en zonas de estepa, en cercanías de bosques.
 
       Fue registrado para el sudoeste de Neuquén, oeste de Río Negro y oeste de Chubut, y posiblemente pueda hallárselo también en los bosques andinos de Santa Cruz.
-
-      En Argentina se encuentra protegido en el Parque Nacional Nahuel Huapi, Parque Nacional Lanín, Parque Nacional Los Alerces, Parque Nacional Lago Puelo y Parque Nacional Perito Moreno.
     map:
       lat: -41.5
       lng: -71.5
@@ -122,7 +120,7 @@ threats:
     description: 'Es perseguido por productores rurales cuando ataca aves de corral.'
 
   - title: 'Atropellamientos'
-    icon: 'alert-triangle'
+    icon: 'car'
     description: 'El peligro de ser atropellado en rutas que atraviesan las zonas donde habita es otra de las amenazas que debe enfrentar.'
 
 bibliography:

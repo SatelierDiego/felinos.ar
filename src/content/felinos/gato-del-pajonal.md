@@ -79,8 +79,6 @@ sections:
       En los Altos Andes y la Puna, donde comparte hábitat con el Gato Andino (*Leopardus jacobita*), alcanza densidades relativamente altas sosteniendo poblaciones estables. En las pampas del centro de Argentina, así como en el Espinal y el sur del Monte, sus poblaciones se encuentran en fuerte retracción, siendo un felino muy escaso.
 
       Su distribución incluye las provincias argentinas de Buenos Aires, Catamarca, Córdoba, Chubut, Formosa, Jujuy, La Pampa, La Rioja, Mendoza, Neuquén, Río Negro, Salta, San Juan, San Luis, Santa Cruz y Tucumán.
-
-      En Argentina el Gato del Pajonal se encuentra protegido en el Parque Nacional Calilegua, Parque Nacional El Rey, Parque Nacional El Palmar, Parque Nacional Lihué Calel, Parque Nacional Laguna Blanca, Parque Nacional Lanín, Parque Nacional Nahuel Huapi, Parque Nacional Los Glaciares y Parque Nacional Bosques Petrificados de Jaramillo, entre otros.
     map:
       lat: -40.0
       lng: -68.0

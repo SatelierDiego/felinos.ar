@@ -94,6 +94,14 @@ sections:
       geojson: '/maps/leopardus-jacobita.geojson'
     images: []
 
+  - type: 'highlight'
+    id: 'highlight'
+    separatorBefore: true
+    separatorAfter: true
+    title: ''
+    content: |
+      El Gato Andino se encuentra protegido dentro de los parques nacionales Los Cardones (Salta), Aconquija (Tucumán), San Guillermo (San Juan) y en diversas áreas protegidas provinciales, municipales y privadas.
+
   - type: 'default'
     id: 'situation'
     title: 'Situación'
@@ -104,7 +112,6 @@ sections:
 
       Este felino es una de las especies menos conocidas a nivel mundial y está considerado como el felino con mayor grado de amenaza de América. Actualmente las principales amenazas que sufre están dadas por la fragmentación, alteración y pérdida de hábitat, la caza en sí misma y la reducción de las poblaciones de sus presas. Es posible que la desaparición de una de sus presas, las chinchillas –especie de roedor incansablemente cazado en el siglo XX por su valiosa piel–, en gran parte de su territorio, haya afectado notablemente sus ya de por si poco densas poblaciones.
 
-      En Argentina el Gato Andino se encuentra protegido en distintas áreas naturales protegidas del país.
     images:
       - src: '/src/assets/images/felines/leopardus-jacobita/situation-jim-sanderson.jpg'
         alt: 'Gato andino fotografiado en la puna'

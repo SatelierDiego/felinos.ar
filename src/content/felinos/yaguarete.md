@@ -112,7 +112,7 @@ threats:
     description: 'La expansión de la frontera agrícola y ganadera destruye y fragmenta los grandes bloques de hábitat que requiere la especie.'
 
   - title: 'Reducción de presas'
-    icon: 'alert-triangle'
+    icon: 'bone-off'
     description: 'La caza furtiva sobre sus presas silvestres reduce la disponibilidad de alimento y aumenta los conflictos con la ganadería.'
 
   - title: 'Caza como represalia'
@@ -120,7 +120,7 @@ threats:
     description: 'Es cazado por ganaderos que lo consideran una amenaza para el ganado, siendo esta una de las principales causas de mortalidad.'
 
   - title: 'Atropellamientos'
-    icon: 'alert-triangle'
+    icon: 'car'
     description: 'Los atropellamientos en rutas que atraviesan su área de distribución son otra amenaza directa para sus escasas poblaciones.'
 
 bibliography:

@@ -98,7 +98,7 @@ sections:
 
       La caza es un grave problema que enfrenta: se lo caza por represalia por depredación de ganado, como trofeo en caza deportiva y también debido al temor de que representa una amenaza para la vida humana. La caza de sus potenciales presas silvestres y las carreteras con mucho tráfico también afectan considerablemente sus movimientos y dispersión.
 
-      En varias provincias de Argentina el Puma fue catalogado como extinto como consecuencia de la caza y el aumento de uso de las tierras para fines agrícola-ganaderos. En Argentina está protegido en numerosos parques nacionales, incluyendo el Parque Nacional Iguazú, el Parque Nacional Nahuel Huapi, el Parque Nacional Los Glaciares, el Parque Nacional Lanín y el Parque Nacional Talampaya, entre otros.
+      En varias provincias de Argentina el Puma fue catalogado como extinto como consecuencia de la caza y el aumento de uso de las tierras para fines agrícola-ganaderos.
     images:
       - src: '/src/assets/images/felines/puma-concolor/situation-jose-pablo-castillo.jpg'
         alt: 'Puma fotografiado en la estepa patagónica'
@@ -118,7 +118,7 @@ threats:
     description: 'La caza deportiva legal e ilegal del puma y la de sus presas silvestres impactan en sus poblaciones.'
 
   - title: 'Atropellamientos'
-    icon: 'alert-triangle'
+    icon: 'car'
     description: 'Los atropellamientos en rutas y caminos son una causa de mortalidad directa y creciente.'
 
 bibliography:
