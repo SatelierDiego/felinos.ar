@@ -16,11 +16,9 @@ const statusColors: Record<string, string> = {
 const statusClass = statusColors[conservationStatus] ?? 'bg-base-100 text-base-700';
 ---
 
-<article
-  class="rounded-card shadow-card ring-accent/20 flex h-full flex-col overflow-hidden bg-white ring-1"
->
+<article class="rounded-card shadow-card ring-accent/20 flex h-full flex-col overflow-hidden bg-white ring-1">
   <!-- Image -->
-  <a href={`/felinos/${slug}/`} class="block aspect-[3/2] overflow-hidden" tabindex="-1" aria-hidden="true">
+  <a href={`/felinos/${slug}/`} class="block aspect-3/2 overflow-hidden" tabindex="-1" aria-hidden="true">
     <Image
       src={image}
       alt={alt}
@@ -48,7 +46,7 @@ const statusClass = statusColors[conservationStatus] ?? 'bg-base-100 text-base-7
       <p class="text-base/60 text-xs italic">{scientificName}</p>
     </div>
 
-    <p class="flex-1 text-base/80 text-sm leading-relaxed line-clamp-3">{subtitle}</p>
+    <p class="line-clamp-3 flex-1 text-base/80 text-sm leading-relaxed">{subtitle}</p>
 
     <a
       href={`/felinos/${slug}/`}
