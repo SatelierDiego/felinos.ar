@@ -2,11 +2,11 @@
 @import 'tailwind-animations';
 
 @theme {
-  /* ── Fonts ─────────────────────────────────────── */
+  /* Fonts ------------------------------------- */
   --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-quicksand), var(--font-open-sans), ui-sans-serif, sans-serif;
 
-  /* ── Semantic design tokens ────────────────────── */
+  /* Semantic design tokens -------------------- */
   --color-base: #110f0e; /* onyx */
   --color-background: #f4f1ea; /* parchment */
   --color-brand: #f0aa5a; /* brand */
@@ -14,12 +14,12 @@
   --color-highlight: #a0522d; /* rusty spice */
   --color-dark: #262321; /* carbon black */
 
-  /* ── Spacing scale ─────────────────────────────── */
+  /* Spacing scale ----------------------------- */
   --spacing-18: 4.5rem;
   --spacing-88: 22rem;
   --spacing-128: 32rem;
 
-  /* ── Border radius ─────────────────────────────── */
+  /* Border radius ----------------------------- */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -28,14 +28,14 @@
 
   --radius-card: var(--radius-md);
 
-  /* ── Typography scale ──────────────────────────── */
+  /* Typography scale -------------------------- */
   --text-display: clamp(2rem, 4vw, 5rem);
   --text-display--line-height: 1.05;
   --text-headline: clamp(1.75rem, 3.5vw, 3rem);
   --text-headline--line-height: 1.15;
 }
 
-/* ── Global base styles ────────────────────────── */
+/* Global base styles -------------------------- */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -76,12 +76,18 @@
   }
 }
 
-/* ── Prose-like rich text ──────────────────────── */
+/* Prose-like rich text ------------------------ */
 .prose-content p + p {
   margin-top: 1.25rem;
 }
 
-/* ── Leaflet overrides ─────────────────────────── */
+/* Leaflet overrides --------------------------- */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  z-index: 0;
+}
+
+/* Glightbox overrides ------------------------- */
 .leaflet-container {
   font-family: var(--font-sans) !important;
   z-index: 0;
@@ -91,7 +97,7 @@
   box-shadow: @apply shadow-md/30;
 }
 
-/* ── Bento gallery grid ─────────────────────────── */
+/* Bento gallery grid -------------------------- */
 @utility bento-gallery {
   display: grid;
   width: 100%;
