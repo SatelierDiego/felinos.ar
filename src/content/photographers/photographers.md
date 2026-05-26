@@ -217,9 +217,9 @@ photographers:
       - 'Herpailurus yagouaroundi'
   - nombre: 'Agustín Esmoris'
     contacto:
-        - titulo: 'Instagram'
-          url: 'https://www.instagram.com/agustin.esmoris/'
-          icon: 'brand-instagram'
+      - titulo: 'Instagram'
+        url: 'https://www.instagram.com/agustin.esmoris/'
+        icon: 'brand-instagram'
     felinos:
       - 'Leopardus colocolo'
   - nombre: 'Aisse Gaertner'
@@ -406,4 +406,11 @@ photographers:
   - nombre: 'Zigmar Riedtmann'
     felinos:
       - 'Leopardus guttulus'
+  - nombre: 'Danniel Paccaloni'
+    contacto:
+      - titulo: 'Flickr'
+        url: 'https://www.flickr.com/photos/danielepaccaloni/'
+        icon: 'brand-flickr'
+    felinos:
+      - 'Leopardus pardalis'
 ---
