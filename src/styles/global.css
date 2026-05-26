@@ -87,21 +87,6 @@
   z-index: 0;
 }
 
-/* Glightbox overrides ------------------------- */
-.gslide-description {
-  background: transparent;
-}
-
-.gdesc-inner {
-  padding: 10px 5px;
-}
-
-.gslide-title {
-  margin-bottom: 0;
-  color: white;
-  font-size: 0.9em;
-}
-
 @utility shadow-card {
   box-shadow: @apply shadow-md/30;
 }
