@@ -67,12 +67,17 @@ const status = {
 <section class="bg-dark">
   {
     separatorBefore && (
-      <div class="text-dark w-full overflow-hidden -translate-y-6">
-        <div set:html={separatorContent} class="h-auto min-w-[2000px] w-full" />
+      <div class="text-dark w-full -translate-y-6 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
       </div>
     )
   }
-  <article class="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8" data-reveal data-animation="animate-fade-in-up" data-once>
+  <article
+    class="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8"
+    data-reveal
+    data-animation="animate-fade-in-up"
+    data-once
+  >
     <h1 class="font-display text-background mb-4 text-xl leading-tight font-bold">
       Ficha del {commonName}
       <span class="text-md text-background/90 font-normal italic">({scientificName})</span>
@@ -144,7 +149,7 @@ const status = {
           </div>
 
           <div class="mt-2 flex items-start gap-3">
-            <Icon name="bone" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+            <Icon name="bone" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
             <div>
               <h2 class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">Dieta</h2>
               <p class="text-background text-sm leading-snug">
@@ -154,7 +159,7 @@ const status = {
           </div>
 
           <div class="mt-2 flex items-start gap-3">
-            <Icon name="map-pin" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+            <Icon name="map-pin" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
             <div>
               <h2 class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">Hábitat</h2>
               <p class="text-background text-sm leading-snug">
@@ -167,7 +172,7 @@ const status = {
             {
               stats.habits && (
                 <div class="flex items-start gap-2">
-                  <Icon name="paw" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+                  <Icon name="paw" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
                   <div>
                     <p class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">Hábitos</p>
                     <p class="text-background text-sm leading-snug">{stats.habits}</p>
@@ -178,7 +183,7 @@ const status = {
             {
               stats.activity && (
                 <div class="flex items-start gap-2">
-                  <Icon name="sun-moon" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+                  <Icon name="sun-moon" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
                   <div>
                     <p class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">Actividad</p>
                     <p class="text-background text-sm leading-snug">{stats.activity}</p>
@@ -187,7 +192,7 @@ const status = {
               )
             }
             <div class="flex items-start gap-2">
-              <Icon name="hourglass" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+              <Icon name="hourglass" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
               <div>
                 <p class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">
                   Tiempo generacional
@@ -197,7 +202,7 @@ const status = {
             </div>
           </div>
           <div class="mt-2 flex items-start gap-2">
-            <Icon name="notebook" class="text-highlight mt-0.5 size-6 shrink-0" aria-hidden="true" />
+            <Icon name="notebook" class="text-accent mt-0.5 size-6 shrink-0" aria-hidden="true" />
             <div>
               <p class="text-background/90 mb-0.5 text-sm font-bold tracking-[0.18em] uppercase">Otros nombres</p>
               <p class="text-background text-sm leading-snug">{stats.otherNames}</p>
@@ -210,8 +215,8 @@ const status = {
 
   {
     separatorAfter && (
-      <div class="text-dark w-full overflow-hidden translate-y-6 rotate-180">
-        <div set:html={separatorContent} class="h-auto min-w-[2000px] w-full" />
+      <div class="text-dark w-full translate-y-6 rotate-180 overflow-hidden">
+        <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
       </div>
     )
   }
