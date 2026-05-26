@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logoBlanco from '@/assets/felinosar-logo-blanco.svg';
 import { SITE } from '@/site.config';
+import SocialLinks from '@/components/SocialLinks.astro';
 
 const year = new Date().getFullYear();
 ---
@@ -15,6 +16,7 @@ const year = new Date().getFullYear();
         <p class="text-base-400 mt-3 text-sm leading-relaxed">
           Sitio de divulgación sobre los felinos silvestres de Argentina con fines educativos y de conservación.
         </p>
+        <SocialLinks class="mt-4" />
       </div>
 
       <!-- Nav -->

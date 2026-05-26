@@ -12,4 +12,9 @@ export const SITE = {
   gtmId: '',
   // Google Analytics 4 — dejar vacío si no se usa. Ej: 'G-XXXXXXXXXX'
   gtagId: '',
+  social: {
+    facebook: 'https://www.facebook.com/felinosar/',
+    instagram: 'https://www.instagram.com/felinos.ar/',
+    twitter: 'https://x.com/FelinosAr',
+  },
 } as const;
