@@ -4,6 +4,7 @@ hero:
   subtitle: 'Conocé las especies que habitan nuestro territorio y los desafíos para su conservación.'
   image: '/src/assets/images/home/hero.jpg'
   alt: 'Felino en su hábitat natural en Argentina'
+  author: 'Danielle Paccaloni'
   cta:
     href: '#grilla'
     text: 'Ver todos los felinos'
