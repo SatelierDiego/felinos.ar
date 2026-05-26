@@ -11,38 +11,31 @@ const homeEntries = await getCollection('home');
 const home = homeEntries[0]!.data;
 const felinosOrdenados = [...home.felinos].sort((a, b) => a.title.localeCompare(b.title, 'es'));
 
-const siteUrl = new URL('/', Astro.site);
+const orgId = `${SITE.url}/#organization`;
 
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
     name: SITE.name,
-    url: siteUrl.href,
+    url: SITE.url,
     description: SITE.description,
     publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl.origin}/images/logo.png`,
-      },
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl.origin}/felinos?search={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
+      '@id': orgId,
     },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': orgId,
     name: SITE.name,
-    url: siteUrl.href,
-    sameAs: [],
+    url: SITE.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.url}/images/felinoar-logo.svg`,
+    },
+    sameAs: [SITE.social.instagram, SITE.social.twitter, SITE.social.facebook],
   },
 ];
 ---
@@ -57,6 +50,7 @@ const jsonLd = [
     subtitle={home.hero.subtitle}
     image={home.hero.image}
     alt={home.hero.alt}
+    author={home.hero.author}
     cta={home.hero.cta}
   />
 
