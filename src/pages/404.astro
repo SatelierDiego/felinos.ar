@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { SITE } from '@/site.config';
+import heroImage from '@/assets/images/home/hero.jpg';
+import Hero from '@/components/Hero.astro';
+
+const felinosEntries = await getCollection('felinos');
+const felinos = felinosEntries
+  .map((f) => ({
+    slug: f.data.slug,
+    title: f.data.hero.title,
+    scientific_name: f.data.scientific_name,
+    image: {
+      src: f.data.hero.image,
+      alt: f.data.hero.alt,
+    },
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title, 'es'));
+
+const navLinks = [
+  { href: '/', label: 'Página de inicio' },
+  { href: '/felinos/', label: 'Listado de todos los felinos' },
+  { href: '/libros/', label: 'Libros recomendados' },
+  { href: '/fotografos/', label: 'Listado de los fotógrafos que participaron' },
+];
+---
+
+<Layout
+  title={`Página no encontrada | ${SITE.name}`}
+  description="La página que buscás no existe. Volvé al inicio o explorá los felinos de Argentina."
+  noindex
+>
+  <Hero title=":(" subtitle="No encontramos la página que buscás" image={heroImage} alt="" size="narrow" />
+  <section class="flex items-center justify-center px-6 pt-24 pb-12">
+    <div class="max-w-lg">
+      <div class="text-center">
+        <p class="font-display text-highlight text-8xl leading-none font-extrabold" aria-hidden="true">404</p>
+        <h1 class="font-display mt-6 text-3xl font-bold text-balance md:text-4xl">Página no encontrada</h1>
+        <p class="mt-3 text-base/70 text-lg">
+          La página que buscás no existe o fue movida. Quizás alguno de estos enlaces te sirva:
+        </p>
+      </div>
+      <nav class="mt-8" aria-label="Enlaces útiles">
+        <ul class="p-0">
+          {
+            navLinks.map(({ href, label }) => (
+              <li class="my-1 h-8">
+                <a href={href} class="flex h-full items-center align-middle">
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </section>
+</Layout>
