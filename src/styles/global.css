@@ -88,9 +88,18 @@
 }
 
 /* Glightbox overrides ------------------------- */
-.leaflet-container {
-  font-family: var(--font-sans) !important;
-  z-index: 0;
+.gslide-description {
+  background: transparent;
+}
+
+.gdesc-inner {
+  padding: 10px 5px;
+}
+
+.gslide-title {
+  margin-bottom: 0;
+  color: white;
+  font-size: 0.9em;
 }
 
 @utility shadow-card {
