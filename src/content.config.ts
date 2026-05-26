@@ -30,6 +30,7 @@ const homeCollection = defineCollection({
         subtitle: z.string(),
         image: image(),
         alt: z.string(),
+        author: z.string(),
         cta: z.object({ href: z.string(), text: z.string() }).optional(),
       }),
       sections: z.array(homeSectionSchema),
@@ -79,6 +80,7 @@ const felinosCollection = defineCollection({
         subtitle: z.string(),
         image: image(),
         alt: z.string(),
+        author: z.string(),
       }),
 
       seo: z.object({
@@ -121,7 +123,7 @@ const felinosCollection = defineCollection({
               z.object({
                 src: image(),
                 alt: z.string(),
-                credit: z.string().optional(),
+                author: z.string().optional(),
               })
             )
             .default([]),
