@@ -1,10 +1,8 @@
 dist/
-
 .astro/
-
 node_modules/
-
 pnpm-debug.log*
+debug.log*
 
 .env
 .env.production
@@ -12,7 +10,6 @@ pnpm-debug.log*
 .DS_Store
 
 lighthouse-reports/
-
 .wrangler/
 wrangler.json
 wrangler.jsonc
