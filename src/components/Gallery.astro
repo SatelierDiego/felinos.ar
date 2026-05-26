@@ -28,7 +28,7 @@ const cellClasses = [
 <section class="bg-dark">
   <!-- Separator SVG -->
   <div class="text-dark w-full -translate-y-6 overflow-hidden">
-    <div set:html={separatorContent} class="h-auto w-full min-w-[2000px]" />
+    <div set:html={separatorContent} class="h-auto w-full min-w-500" />
   </div>
   <div class="py-20">
     <div class="mx-auto max-w-7xl px-[clamp(12px,2vw,24px)]">
@@ -45,7 +45,7 @@ const cellClasses = [
                 showMagnifyingGlass
                 overlayTitle={item.alt}
                 overlaySubtitle={`© ${item.author}`}
-                ariaLabel={`${item.alt} — foto de ${item.author}`}
+                ariaLabel={`foto de ${item.author}`}
                 data-gallery={galleryId}
                 data-glightbox={`description: © ${item.author}`}
                 extraAnchorClass="glightbox h-full"
