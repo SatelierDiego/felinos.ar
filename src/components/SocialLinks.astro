@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+import { SITE } from '@/site.config';
+import type { SocialLinksProps } from '@/types/components/SocialLinks';
+
+interface Props extends SocialLinksProps {}
+
+const { class: extraClass = '' } = Astro.props;
+
+const links = [
+  { name: 'brand-facebook', url: SITE.social.facebook, label: 'Facebook' },
+  { name: 'brand-instagram', url: SITE.social.instagram, label: 'Instagram' },
+  { name: 'brand-twitter', url: SITE.social.twitter, label: 'Twitter' },
+];
+---
+
+<div class:list={['flex gap-4', extraClass]}>
+  {
+    links.map(({ name, url, label }) => (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        class="text-base-400 bg-highlight hover:bg-highlight/80 rounded-sm p-2 text-base transition-colors"
+      >
+        <Icon name={name} class="h-6 w-6" aria-hidden="true" />
+      </a>
+    ))
+  }
+</div>
