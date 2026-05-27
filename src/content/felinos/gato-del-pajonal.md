@@ -29,7 +29,7 @@ stats:
   habits: 'Terrestre'
   activity: 'Nocturno y crepuscular'
   generationTime: '7 años'
-  otherNames: ''
+  otherNames: 'gato pajero, gato de las pampas, colocolo'
 
 sections:
   - type: 'default'

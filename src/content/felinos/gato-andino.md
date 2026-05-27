@@ -29,7 +29,7 @@ stats:
   habits: 'Terrestre'
   activity: 'Todo el día'
   generationTime: 'Desconocido'
-  otherNames: ''
+  otherNames: 'chinchay, gato lince'
 
 sections:
   - type: 'default'

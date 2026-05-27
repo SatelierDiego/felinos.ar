@@ -29,7 +29,7 @@ stats:
   habits: 'Terrestre'
   activity: 'Todo el día'
   generationTime: '8 años'
-  otherNames: ''
+  otherNames: 'gato de Geoffroy, gato silvestre'
 
 sections:
   - type: 'default'
