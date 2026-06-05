@@ -9,7 +9,7 @@ hero:
   author: 'Eduardo Minte Hess'
 
 seo:
-  title: 'Guiña (Leopardus guigna) | Felinos.Ar'
+  title: 'Gato Huiña (Leopardus guigna) | Felinos.Ar'
   description: 'Información sobre la guiña o kodkod: características, hábitat, comportamiento y amenazas. El felino más pequeño de América.'
 
 scientific_name: 'Leopardus guigna'

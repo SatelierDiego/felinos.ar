@@ -48,75 +48,75 @@ felinos:
     scientific_name: 'Leopardus jacobitus'
     image:
       src: '/src/assets/images/headshots/leopardus-jacobita.jpg'
-      alt: 'Gato andino en ambiente rocoso'
+      alt: ''
 
   - slug: 'ocelote'
     title: 'Ocelote'
     scientific_name: 'Leopardus pardalis'
     image:
       src: '/src/assets/images/headshots/leopardus-pardalis.jpg'
-      alt: 'Ocelote en selva'
+      alt: ''
 
   - slug: 'gato-del-pajonal'
     title: 'Gato del Pajonal'
     scientific_name: 'Leopardus colocolo'
     image:
       src: '/src/assets/images/headshots/leopardus-colocolo.jpg'
-      alt: 'Gato del pajonal en pastizal'
+      alt: ''
 
   - slug: 'margay'
     title: 'Margay'
     scientific_name: 'Leopardus wiedii'
     image:
       src: '/src/assets/images/headshots/leopardus-wiedii.jpg'
-      alt: 'Margay en árbol'
+      alt: ''
 
   - slug: 'puma'
     title: 'Puma'
     scientific_name: 'Puma concolor'
     image:
       src: '/src/assets/images/headshots/puma-concolor.jpg'
-      alt: 'Puma en ambiente natural'
+      alt: ''
 
   - slug: 'gato-montes'
     title: 'Gato Montés'
     scientific_name: 'Leopardus geoffroyi'
     image:
       src: '/src/assets/images/headshots/leopardus-geoffroyi.jpg'
-      alt: 'Gato montés'
+      alt: ''
 
-  - slug: 'gato-tigre-del-sur'
+  - slug: 'tirica'
     title: 'Tirica'
     scientific_name: 'Leopardus guttulus'
     image:
       src: '/src/assets/images/headshots/leopardus-guttulus.jpg'
-      alt: 'Tirica en selva'
+      alt: ''
 
-  - slug: 'gato-tigre-del-norte'
+  - slug: 'tigrina'
     title: 'Tigrina'
     scientific_name: 'Leopardus tigrinus'
     image:
       src: '/src/assets/images/headshots/leopardus-tigrinus.jpg'
-      alt: 'Tigrina'
+      alt: ''
 
   - slug: 'yaguarete'
     title: 'Yaguareté'
     scientific_name: 'Panthera onca'
     image:
       src: '/src/assets/images/headshots/panthera-onca.jpg'
-      alt: 'Yaguareté'
+      alt: ''
 
-  - slug: 'guina'
+  - slug: 'gato-huina'
     title: 'Gato Huiña'
     scientific_name: 'Leopardus guigna'
     image:
       src: '/src/assets/images/headshots/leopardus-guigna.jpg'
-      alt: 'Gato huiña en bosque'
+      alt: ''
 
   - slug: 'yaguarundi'
     title: 'Yaguarundí'
     scientific_name: 'Herpailurus yagouaroundi'
     image:
       src: '/src/assets/images/headshots/herpailurus-yagouaroundi.jpg'
-      alt: 'Yaguarundí'
+      alt: ''
 ---
